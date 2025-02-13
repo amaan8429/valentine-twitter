@@ -10,6 +10,11 @@ const inter = JetBrainMono({
   variable: "--font-sans",
 });
 
+export const metadata = {
+  title: "Twitter Valentine",
+  description: "Find your Twitter Valentine",
+};
+
 export default function RootLayout({
   children,
 }: {
