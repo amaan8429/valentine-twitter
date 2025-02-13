@@ -89,22 +89,24 @@ export default function Home() {
               <h1 className="text-3xl font-bold text-center">
                 Find Your Twitter Valentine
               </h1>
-              <Input
-                fullWidth
-                label="Twitter Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                size="lg"
-              />
-              <Button
-                fullWidth
-                color="primary"
-                size="lg"
-                disabled={!username}
-                onClick={handleSubmit}
-              >
-                Find My Valentine
-              </Button>
+              <form onSubmit={handleSubmit} action="">
+                <Input
+                  fullWidth
+                  label="Twitter Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  size="lg"
+                />
+                <Button
+                  fullWidth
+                  color="primary"
+                  size="lg"
+                  className="mt-4"
+                  disabled={!username}
+                >
+                  Find My Valentine
+                </Button>
+              </form>
             </>
           ) : (
             <motion.div
